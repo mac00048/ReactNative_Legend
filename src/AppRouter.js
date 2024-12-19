@@ -5,6 +5,7 @@ import DayOverviewScreen from './screens/DayOverviewScreen';
 import DayDirectionsScreen from './screens/DayDirectionsScreen';
 import DayMapScreen from './screens/DayMapScreen';
 import ImageScreen from './screens/ImageScreen';
+import ActivityPDFScreen from './screens/ActivityPDFScreen';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -83,6 +84,7 @@ function AppRouter() {
                 <MainStack.Screen name="Login" component={LoginScreen} />
                 {/* <MainStack.Screen name="Activity" component={ActivityNavigator} /> */}
                 <MainStack.Screen name="ActivityOverview" component={ActivityOverviewScreen} />
+                <MainStack.Screen name="ActivityPDF" component={ActivityPDFScreen} />
                 <MainStack.Screen name="ActivityDays" component={ActivityDaysScreen} />
                 {/* <MainStack.Screen name="Day" component={DayNavigator} /> */}
 
