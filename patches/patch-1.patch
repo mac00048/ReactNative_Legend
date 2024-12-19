@@ -1,0 +1,6 @@
+456a457,461
+>     public void setFollowPitch(double pitch) {
+>         mPitch = pitch;
+>         updateCameraPositionIfNeeded(true);
+>     }
+> 

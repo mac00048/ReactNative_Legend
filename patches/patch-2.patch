@@ -1,0 +1,6 @@
+83a84,88
+>     @ReactProp(name="followPitch")
+>     public void setFollowPitch(RCTMGLCamera camera, double value) {
+>         camera.setFollowPitch(value);
+>     }
+> 
