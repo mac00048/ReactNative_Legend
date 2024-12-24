@@ -48,7 +48,7 @@ class ActivityFooterSection extends React.Component {
           <VStack alignItems="center">
             <Icon
               color={isActive == 'ActivityPDF' ? 'white' : 'rgb(180,180,180)'}
-              name="bullseye"
+              name="file-alt"
               size={20}
             />
             <Text
