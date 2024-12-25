@@ -1,6 +1,6 @@
 import React from 'react';
-import {ScrollView, Text, VStack, View, Alert} from 'native-base';
-import {Linking, PermissionsAndroid, TouchableOpacity} from 'react-native';
+import {ScrollView, Text, VStack, View} from 'native-base';
+import {Linking, PermissionsAndroid, TouchableOpacity, Alert} from 'react-native';
 import RNFS from 'react-native-fs';
 import RNFetchBlob from 'rn-fetch-blob';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -16,19 +16,15 @@ class ActivityOverviewScreen extends React.Component {
   }
   async handlePress(document) {
     try {
-      // Path to the source file in your app-specific directory
       const sourcePath = document.source;
 
-      // Destination path to the Downloads directory
       const destPath =
         Platform.OS === 'android'
-          ? `${RNFS.DownloadDirectoryPath}/${document.fileId}.pdf`
-          : `${RNFS.DocumentDirectoryPath}/${document.fileId}`; // iOS fallback
+          ? `${RNFS.DownloadDirectoryPath}/${document.title}`
+          : `${RNFS.DocumentDirectoryPath}/${document.title}`; // iOS fallback
 
-      // Copy the file
       await RNFS.copyFile(sourcePath, destPath);
-
-      console.log('File successfully copied to:', destPath);
+      Alert.alert('File downloaded successfully', destPath);
     } catch (error) {
       console.error('Error copying file:', error);
     }
