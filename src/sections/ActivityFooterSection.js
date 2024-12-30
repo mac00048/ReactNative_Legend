@@ -10,23 +10,27 @@ class ActivityFooterSection extends React.Component {
   }
 
   render() {
-    const isActivityOverview = this.props.route.name === 'ActivityOverview';
+    const isActive = this.props.route.name;
 
     return (
       <HStack justifyContent="space-evenly" backgroundColor={blueColor}>
         <Button
           flex={1}
           background="transparent"
-          active={isActivityOverview}
-          onPress={() => this.props.navigation.navigate('ActivityOverview', {data: this.props.data})}>
+          active={isActive == 'ActivityOverview'}
+          onPress={() =>
+            this.props.navigation.navigate('ActivityOverview', {
+              data: this.props.data,
+            })
+          }>
           <VStack alignItems="center">
             <Icon
-              color={isActivityOverview ? 'white' : 'rgb(180,180,180)'}
+              color={isActive == 'ActivityOverview' ? 'white' : 'rgb(180,180,180)'}
               name="bullseye"
               size={20}
             />
             <Text
-              color={isActivityOverview ? 'white' : 'rgb(180,180,180)'}
+              color={isActive == 'ActivityOverview' ? 'white' : 'rgb(180,180,180)'}
               fontSize="sm">
               OVERVIEW
             </Text>
@@ -35,34 +39,42 @@ class ActivityFooterSection extends React.Component {
         <Button
           flex={1}
           background="transparent"
-          active={isActivityOverview}
-          onPress={() => this.props.navigation.navigate('ActivityOverview', {data: this.props.data})}>
+          active={isActive == 'ActivityPDF'}
+          onPress={() =>
+            this.props.navigation.navigate('ActivityPDF', {
+              data: this.props.data,
+            })
+          }>
           <VStack alignItems="center">
             <Icon
-              color={isActivityOverview ? 'white' : 'rgb(180,180,180)'}
-              name="bullseye"
+              color={isActive == 'ActivityPDF' ? 'white' : 'rgb(180,180,180)'}
+              name="file-alt"
               size={20}
             />
             <Text
-              color={isActivityOverview ? 'white' : 'rgb(180,180,180)'}
+              color={isActive == 'ActivityPDF' ? 'white' : 'rgb(180,180,180)'}
               fontSize="sm">
-              PDFs
+              FILES
             </Text>
           </VStack>
         </Button>
         <Button
           flex={1}
           background="transparent"
-          active={!isActivityOverview}
-          onPress={() => this.props.navigation.navigate('ActivityDays', {data: this.props.data})}>
+          active={isActive == 'ActivityDays'}
+          onPress={() =>
+            this.props.navigation.navigate('ActivityDays', {
+              data: this.props.data,
+            })
+          }>
           <VStack alignItems="center">
             <Icon
-              color={!isActivityOverview ? 'white' : 'rgb(180,180,180)'}
+              color={isActive == 'ActivityDays' ? 'white' : 'rgb(180,180,180)'}
               name="calendar-alt"
               size={20}
             />
             <Text
-              color={!isActivityOverview ? 'white' : 'rgb(180,180,180)'}
+              color={isActive == 'ActivityDays' ? 'white' : 'rgb(180,180,180)'}
               fontSize="sm">
               DAYS
             </Text>

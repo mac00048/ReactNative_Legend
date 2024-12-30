@@ -1,31 +1,36 @@
 import React from 'react';
 import {Dimensions, Linking} from 'react-native';
-import {Toast} from 'native-base';
 import {RenderHTML} from 'react-native-render-html';
 
 const width = Dimensions.get('window').width;
 
 const tagsStyles = {
-  p: {marginTop: 0, marginBottom: 16, lineHeight: 21},
-  del: {textDecorationLine: 'line-through'},
+  p: {marginTop: 0, marginBottom: 16, lineHeight: 21, color: '#696969'},
+  del: {textDecorationLine: 'line-through', color: '#696969'},
   h1: {
     fontSize: 16 * 2,
     marginTop: 16 * 2 * 0.335,
     marginBottom: 16 * 2 * 0.335,
     fontWeight: 'bold',
+    color: '#696969',
   },
   h2: {
     fontSize: 16 * 1.5,
     marginTop: 16 * 1.5 * 0.415,
     marginBottom: 16 * 1.5 * 0.415,
     fontWeight: 'bold',
+    color: '#696969',
   },
   h3: {
     fontSize: 16 * 1.17,
     marginTop: 16 * 1.17 * 0.5,
     marginBottom: 16 * 1.17 * 0.5,
     fontWeight: 'bold',
+    color: '#696969',
   },
+  li: {
+    color: '#696969'
+  }
 };
 
 const renderersProps = {
