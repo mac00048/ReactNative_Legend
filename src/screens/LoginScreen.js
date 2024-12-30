@@ -49,8 +49,8 @@ class LoginScreen extends React.Component {
   onClick = async () => {
     const {navigate} = this.props.navigation;
 
-    // const url = `https://backoffice.legendatours.com/api/redeem/${this.state.voucher}`;
-    const url = `http://192.168.10.118:8082/api/redeem/${this.state.voucher}`;
+    const url = `https://backoffice.legendatours.com/api/redeem/${this.state.voucher}`;
+    // const url = `http://192.168.10.118:8082/api/redeem/${this.state.voucher}`;
 
     const documentDir = RNFetchBlob.fs.dirs.DocumentDir;
     const sourcePath = `${documentDir}/${this.state.voucher}.zip`;

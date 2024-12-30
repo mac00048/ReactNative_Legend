@@ -7619,6 +7619,11 @@ react-native-eject@^1.0.1:
   resolved "https://registry.yarnpkg.com/react-native-eject/-/react-native-eject-1.0.1.tgz#2ca5fa1973a92212b179f875489e2a731099b4de"
   integrity sha512-GzEaAhIlWG+3QWGBONlrv8pADyhD12WF1ikZ1JtAKW6VrG6sIJcQvJapMXUDO/DIJps1jtvhlB1LIJlstNHIUw==
 
+react-native-file-viewer@^2.1.5:
+  version "2.1.5"
+  resolved "https://registry.yarnpkg.com/react-native-file-viewer/-/react-native-file-viewer-2.1.5.tgz#cd4544f573108e79002b5c7e1ebfce4371885250"
+  integrity sha512-MGC6sx9jsqHdefhVQ6o0akdsPGpkXgiIbpygb2Sg4g4bh7v6K1cardLV1NwGB9A6u1yICOSDT/MOC//9Ez6EUg==
+
 react-native-fs@^2.20.0:
   version "2.20.0"
   resolved "https://registry.yarnpkg.com/react-native-fs/-/react-native-fs-2.20.0.tgz#05a9362b473bfc0910772c0acbb73a78dbc810f6"

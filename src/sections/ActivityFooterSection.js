@@ -54,7 +54,7 @@ class ActivityFooterSection extends React.Component {
             <Text
               color={isActive == 'ActivityPDF' ? 'white' : 'rgb(180,180,180)'}
               fontSize="sm">
-              PDFs
+              FILES
             </Text>
           </VStack>
         </Button>
