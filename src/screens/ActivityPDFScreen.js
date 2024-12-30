@@ -18,21 +18,20 @@ class ActivityOverviewScreen extends React.Component {
   async handlePress(document) {
     try {
       const sourcePath = document.source;
-
-      // const destPath =
-      //   Platform.OS === 'android'
-      //     ? `${RNFS.DownloadDirectoryPath}/${document.title}`
-      //     : `${RNFS.DocumentDirectoryPath}/${document.title}`; // iOS fallback
-      
-      // await RNFS.copyFile(sourcePath, destPath);
-      // Alert.alert('File downloaded successfully', destPath);
+      // const destPath = `${RNFS.DownloadDirectoryPath}/${document.title}`; // Public folder
+    
       if (await RNFS.exists(sourcePath)) {
-        // Open the file if it already exists
-        await FileViewer.open(sourcePath);
-        return;
+        // await RNFS.copyFile(sourcePath, destPath); // Copy to Downloads folder
+        // console.log('Sourcepath', sourcePath);
+        // console.log('File copied to:', destPath);
+    
+        await FileViewer.open(sourcePath); // Open the copied file
+      } else {
+        console.error('File does not exist:', sourcePath);
       }
     } catch (error) {
-      console.error('Error copying file:', error);
+      console.error('Error opening file:', error);
+      Alert.alert('Error', 'There is no app to open this file');
     }
   }
   // async handlePress(document) {

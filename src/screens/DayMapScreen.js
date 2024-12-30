@@ -322,7 +322,7 @@ class DayMapScreen extends React.Component {
                 margin={1}
                 backgroundColor="rgba(255, 255, 255, 0.8)"
                 onPress={this.onNavigate}>
-                <IconClose name="close-a" size={20} />
+                <IconClose name="close-a" color="#474747" size={20} />
               </Button>
             )}
             {!this.state.navigate && (
@@ -333,7 +333,7 @@ class DayMapScreen extends React.Component {
                 h={50}
                 margin={1}
                 onPress={this.onNavigate}>
-                <Icon name="location-arrow" color="white" size={20} />
+                <Icon name="location-arrow" color="#FFFFFF" size={20} />
               </Button>
             )}
             <Button
@@ -343,7 +343,7 @@ class DayMapScreen extends React.Component {
               h={50}
               margin={1}
               onPress={this.onFitToUser}>
-              <Icon name="location-crosshairs" size={20} />
+              <Icon name="location-crosshairs" color="#474747" size={20} />
             </Button>
             <Button
               backgroundColor="rgba(255, 255, 255, 0.8)"
@@ -352,7 +352,7 @@ class DayMapScreen extends React.Component {
               h={50}
               margin={1}
               onPress={this.onFitToTrack}>
-              <Icon name="route" size={20} />
+              <Icon name="route" color="#474747" size={20} />
             </Button>
           </VStack>
         </ZStack>
