@@ -384,7 +384,7 @@ class LoginScreen extends React.Component {
                     textAlign: 'center',
                   }}
                   placeholder={this.state.focused ? '' : 'CODE'}
-                  placeholderTextColor="#999"
+                  placeholderTextColor="#000000"
                   value={this.state.voucher}
                   onFocus={() => this.setState({focused: true})}
                   onChangeText={(text) =>
@@ -397,6 +397,7 @@ class LoginScreen extends React.Component {
                     width: '100%',
                     backgroundColor: blueColor,
                     borderRadius: 6,
+                    height: 50
                   }}
                   onPress={this.onClick}>
                   {!this.state.loading && (

@@ -39,7 +39,8 @@ class SlideshowSection extends React.Component {
                                 paddingLeft: 10,
                                 paddingRight: 10,
                                 paddingTop: 5,
-                                paddingBottom: 5
+                                paddingBottom: 5,
+                                color: "#000000"
                             }}>
                                 { image.title }
                             </Text>
